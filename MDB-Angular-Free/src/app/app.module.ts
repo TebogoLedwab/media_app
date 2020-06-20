@@ -11,12 +11,14 @@ import { MDBBootstrapModule } from 'angular-bootstrap-md';
 
 import { AppRoutingModule } from './app-routing.module';
 import { PostUpdateComponent } from './components/post-update/post-update.component';
+import { LikeButtonComponent } from './components/like-button/like-button.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
     PostUpdateComponent,
+    LikeButtonComponent,
  
   ],
   imports: [
