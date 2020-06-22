@@ -1,0 +1,13 @@
+button {
+    border: none;
+    outline: none;
+    background: transparent;
+}
+
+.heart {
+
+    &active{
+        color: deeppink;
+    }
+    
+}
