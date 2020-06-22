@@ -1,4 +1,6 @@
 <div class="d-flex p-2">
-    <button (click)="clickCount()">Like</button>
+    <button (click)="clickCount()">
+        <mdb-icon class="heart" far icon="heart" size="2x" [ngClass]="{'active': isActive}"></mdb-icon>
+    </button>
     <p>{{ counter }}</p>
 </div>
