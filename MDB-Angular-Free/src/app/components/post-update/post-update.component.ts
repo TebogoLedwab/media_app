@@ -7,10 +7,9 @@ import { Component, OnInit, Input } from '@angular/core';
 })
 export class PostUpdateComponent implements OnInit {
 
-  @Input() displayForm: any;
+  //@Input() displayForm: any;
 
-  email: string = '';
-  password: string = '';
+ 
   post: string ='';
 
   posts = [];
@@ -20,12 +19,8 @@ export class PostUpdateComponent implements OnInit {
   ngOnInit() {
   }
 
-  submitPost(post){
-    console.log(post)
-  }
-
   // This function must post updates to the database
-  user_login () {
+  submitPost () {
     console.log(`post: ${this.post}`);
     this.posts.push(this.post);
     console.log(`posts: ${this.posts}`);
