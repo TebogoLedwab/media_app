@@ -1,12 +1,11 @@
 const express = require('express');
-
+const User = require ('../models/user')
 const router = express.Router();
 
 router.get('/', async(req, res) =>{
     try{
-        res.json({
-            message: "view route is working"
-        });
+        const user = await User.find({});
+        res.json(user);
     } catch(err){
         res.json({
             message: err

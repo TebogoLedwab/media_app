@@ -36,6 +36,7 @@ const viewRoute = require('./api/routes/viewPost');
 const postRoute = require('./api/routes/newPost');
 const likeRoute = require('./api/routes/likes');
 const deleteRoute = require('./api/routes/deletePost');
+const commentRoute = require('./api/routes/comments');
 
 // Routes
 
@@ -43,6 +44,7 @@ app.use("/", viewRoute);
 app.use('/post', postRoute);
 app.use('/likes', likeRoute);
 app.use('/postDelete', deleteRoute);
+app.use('/comments', commentRoute);
 
 
 // Error handling
