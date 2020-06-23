@@ -2,18 +2,29 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-
-import { AppComponent } from './app.component';
+import { FormsModule,  ReactiveFormsModule} from '@angular/forms';
+import { HttpClientModule } from '@angular/common/http';
 
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
-import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+
 import { AppRoutingModule } from './app-routing.module';
+
+import { AppComponent } from './app.component';
+import { LoginComponent } from './components/login/login.component';
+import { PostUpdateComponent } from './components/post-update/post-update.component';
+import { LikeButtonComponent } from './components/like-button/like-button.component';
+import { HomeComponentComponent } from './components/home-component/home-component.component';
 import { RegisterComponent } from './components/register/register.component';
-import { Routes } from '@angular/router';
+
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    PostUpdateComponent,
+    LikeButtonComponent,
+    HomeComponentComponent,
+    LoginComponent
+ 
   ],
   imports: [
     BrowserModule,
@@ -21,7 +32,9 @@ import { Routes } from '@angular/router';
     MDBBootstrapModule.forRoot(),
     FormsModule,
     ReactiveFormsModule,
-    AppRoutingModule
+    AppRoutingModule,
+    HttpClientModule
+
   ],
   providers: [],
   bootstrap: [AppComponent]

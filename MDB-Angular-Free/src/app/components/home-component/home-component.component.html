@@ -1,0 +1,51 @@
+<!--Navbar-->
+<mdb-navbar
+  SideClass="navbar navbar-expand-lg navbar-dark bg-primary"
+  [containerInside]="false"
+>
+  <!-- Navbar brand -->
+  <mdb-navbar-brand>
+    <a class="navbar-brand" href="#">{{ title | uppercase }}</a>
+  </mdb-navbar-brand>
+
+  <links>
+    <!-- Links -->
+    <ul class="navbar-nav ml-auto">
+      <li class="nav-item">
+        <a class="nav-link waves-light" mdbWavesEffect>Sign Up</a>
+      </li>
+      <li class="nav-item active">
+        <a class="nav-link waves-light" mdbWavesEffect
+          >Login<span class="sr-only">(current)</span></a
+        >
+      </li>
+    </ul>
+    <!-- Links -->
+  </links>
+</mdb-navbar>
+
+<div class="container p-5">
+  <div class="row">
+    <div class="col-md-10">
+      <ul>
+        <li *ngFor="let post of posts" class="p-3">
+          <mdb-card>
+            <mdb-card-body>
+              <mdb-card-title>
+                <h4>
+                  {{ post.firstName }} <span>{{ post.lastName }}</span>
+                </h4>
+              </mdb-card-title>
+              <mdb-card-text>
+              </mdb-card-text>
+              <div class="flex-row ml-auto">
+                <app-like-button></app-like-button>
+                <a class="card-link">comment</a>
+              </div>
+            </mdb-card-body>
+          </mdb-card>
+        </li>
+      </ul>
+    </div>
+  </div>
+</div>
